@@ -1,3 +1,6 @@
+rodar:
+-docker-compose up
+
 # Node.js Rest APIs with Express, Sequelize & MySQL example
 
 For more detail, please visit:
