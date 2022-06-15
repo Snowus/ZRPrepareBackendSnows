@@ -6,6 +6,24 @@ module.exports = (sequelize, Sequelize) => {
     description: {
       type: Sequelize.STRING
     },
+    data: {
+      type: Sequelize.DATEONLY
+    },
+    startAt: {
+      type: Sequelize.TIME
+    },
+    endAt: {
+      type: Sequelize.TIME
+    },
+    local: {
+      type: Sequelize.STRING
+    },
+    color: {
+      type: Sequelize.STRING
+    },
+    calendarID: {
+      type: Sequelize.STRING
+    },
     published: {
       type: Sequelize.BOOLEAN
     }

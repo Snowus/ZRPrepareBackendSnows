@@ -27,7 +27,7 @@ db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to snows's updated application." });
+  res.json({ message: "Welcome to snows's updated (?) application." });
 });
 
 require("./app/routes/event.routes")(app);

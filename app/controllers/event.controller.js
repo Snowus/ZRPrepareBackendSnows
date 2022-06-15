@@ -16,6 +16,12 @@ exports.create = (req, res) => {
   const event = {
     title: req.body.title,
     description: req.body.description,
+    data: req.body.data,
+    startAt: req.body.startAt,
+    endAt:req.body.endAt,
+    local: req.body.local,
+    color: req.body.color,
+    calendarID: req.body.calendarID,
     published: req.body.published ? req.body.published : false
   };
 
