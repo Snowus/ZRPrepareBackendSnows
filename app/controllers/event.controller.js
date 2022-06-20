@@ -7,7 +7,14 @@ exports.create = (req, res) => {
   // Validate request
   if (!req.body.title) {
     res.status(400).send({
-      message: "Content can not be empty!"
+      message: "Title: Content can not be empty!"
+    });
+    return;
+  }
+
+  if (!req.body.data) {
+    res.status(400).send({
+      message: "Data: Content can not be empty!"
     });
     return;
   }
@@ -43,7 +50,11 @@ exports.findAll = (req, res) => {
   const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
-  Event.findAll({ where: condition })
+  Event.findAll({ 
+    order: [
+      ["DATA", "ASC"],
+    ],
+   })
     .then(data => {
       res.send(data);
     })
